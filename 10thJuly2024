@@ -1,0 +1,32 @@
+isLocationSelected true
+if !isLocationSelected showing an error message to set your location.
+getlabel Northern Ring Road, Riyadh, SA
+getsavedid 668e26cfe0da873f808095ff
+slctLoc 
+	address: "3898 Highway 40, Riyadh, Riyadh, Saudi Arabia"
+	country: "Saudi Arabia"
+	latitude: "24.8273375"
+	longitude: "46.8043546"
+	place: "Riyadh"
+	provider: "mapbox"
+	region: "Riyadh"
+redirect false
+if  getlabel and slctLoc
+	commiting the getlabel in Set_Saved_Label
+	setItem slctLoc in localStorage location
+	setItem getsavedid in localStorage saveaddressId
+else if no getlabel but slctLoc 
+	setItem slctLoc in localStorage
+	commiting the slctLoc in SET_SELECT_LOC
+	commiting the getlabel as null in Set_Saved_Label
+	removing the saveaddressId from the local storage.
+getting the location from the localStorage
+
+
+
+
+
+	
+	
+
+	
